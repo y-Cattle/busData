@@ -1,0 +1,17 @@
+<template name='timeBtn'>
+  <view class='msgContainer'>
+    <view class='avatar_data'>
+      <image src='{{avatar}}'></image>
+      <text>{{N}}年{{Y}}月——司机数据</text>
+    </view>
+    <text class='text'>{{SJXM}}公交信息查询</text>
+    <image class='contentImg' src='{{src}}'></image>
+    <image class='clickImg' src='/images/click.png'></image>
+    <view class='btnBg'>
+      <view class='btnContainer'>
+        <button>点击查询相关信息</button>
+        <image class='next' src='/images/icon/next.png'></image>
+      </view>
+    </view>
+  </view>
+</template>

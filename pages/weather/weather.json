@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "animation-menu": "../../component/animationMenu/animationMenu"
+  }
+}

@@ -1,0 +1,11 @@
+<!--component/animationMenu/animationMenu.wxml-->
+<!-- 悬浮菜单 -->
+<view class='page'>
+  <view class='menus' wx:if='{{!bcgImgAreaShow}}'>
+    <image src="../../images/animationMenu/share_circle.png" animation="{{animationOne}}" class="menu"></image>
+    <button plain='true' open-type='share' animation="{{animationOne}}" class='menu share'></button>
+    <image src="../../images/animationMenu/setting.png" animation="{{animationTwo}}" class="menu" catchtap="menuToSetting"></image>
+    <image src="../../images/animationMenu/home.png" animation="{{animationFour}}" class="menu" catchtap="menuToAbout"></image>
+    <image src="../../images/animationMenu/menu.png" animation="{{animationMain}}" class="menu main" catchtap="menuMain"></image>
+  </view>
+</view>

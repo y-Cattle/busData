@@ -1,0 +1,118 @@
+/* pages/day/day.wxss */
+
+page{
+  /* background: rgba(189, 107, 107, 0.493); */
+  opacity: 0.7;
+}
+
+.bgImg{
+  position: fixed;
+  z-index: -3;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+}
+.img{
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  /* background: rgba(165, 159, 159, 0.336); */
+  padding: 0 0;
+}
+
+.cal_content {
+  width: 100%;
+  align-items: center;
+}
+
+.day-calendar {
+  width: 99.5%;
+  background-color: rgba(177, 170, 170, 0.685);
+  padding-top: 20rpx;
+}
+
+.day-header {
+  font-size: large;
+  color: white;
+  height: 60rpx;
+  background: rgba(192, 136, 136, 0.87);
+  box-shadow: inset 6rpx 8rpx 3rpx rgba(41, 38, 38, 0.829);
+  padding: 9rpx 0;
+}
+
+.day-header picker{
+  width: 260rpx;
+  background: rgba(95, 76, 76, 0.89);
+  border-radius: 30rpx;
+  box-shadow: 10rpx 12rpx 8rpx rgba(95, 76, 76, 0.568);
+  padding: 0rpx 10rpx;
+}
+
+.calendar--calendar-weeks{
+  background: rgba(189, 107, 107, 0.87);
+  box-shadow: 6rpx 6rpx 6rpx rgba(189, 107, 107, 0.582);
+}
+
+.calendar--cwj-icon{
+  width:80rpx;
+  /* height: 50rpx; */
+  background: rgba(95, 76, 76, 0.89);
+  border-radius: 30rpx;
+  box-shadow: 10rpx 12rpx 8rpx rgba(95, 76, 76, 0.568);
+  padding: 0rpx 10rpx;
+}
+
+.day-board {
+  height: 435rpx;
+  color: white;
+  box-shadow: 10rpx 12rpx 8rpx rgba(122, 45, 45, 0.685);
+}
+
+/* 数据部分 */
+.content-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #000;
+  /* height: 500rpx; */
+  padding: 20rpx 0;
+  font-size: 36rpx;
+  /* font-weight: bold; */
+  background: rgba(95, 76, 76, 0.438);
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.leftData{
+  width: 49%;
+  /* height: 500rpx; */
+  /* border: 1rpx solid black; */
+  box-shadow: inset 10rpx 12rpx 8rpx rgba(138, 129, 129, 0.88);
+}
+
+.middle-line{
+  width: 1%;
+  background: rgba(100, 96, 96, 0.932);
+}
+.rightData{
+  width: 49%;
+  /* height: 500rpx; */
+  /* border: 1rpx solid black; */
+  box-shadow: inset 10rpx 12rpx 8rpx rgba(138, 129, 129, 0.88);
+}
+.left-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15rpx;
+  border-top: 2rpx solid rgba(138, 129, 129, 0.88);
+  border-bottom: 2rpx solid rgba(138, 129, 129, 0.88);
+}

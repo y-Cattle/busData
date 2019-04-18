@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/month/month",
+    "pages/day/day",
+    "pages/menu/menu",
+    "pages/weather/weather",
+    "pages/list/list",
+    "pages/updateNum/updateNum",
+    "pages/login/login",
+    "pages/detail0/detail0",
+    "pages/myMenu/myMenu"
+  ],
+  "plugins": {
+    "calendar": {
+      "version": "1.1.3",
+      "provider": "wx92c68dae5a8bb046"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取当地天气信息"
+    }
+  },
+  "tabBar": {
+    "backgroundColor": "#DCDCDC",
+    "color": "#fff",
+    "selectedColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "分类",
+        "iconPath": "/images/tab/listG.png",
+        "selectedIconPath": "/images/tab/listB.png"
+      },
+      {
+        "pagePath": "pages/myMenu/myMenu",
+        "text": "我的",
+        "iconPath": "/images/tab/myG.png",
+        "selectedIconPath": "/images/tab/myB.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTitleText": "公交信息查询",
+    "navigationBarBackgroundColor": "#DCDCDC",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  }
+}

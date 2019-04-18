@@ -1,0 +1,59 @@
+<!--pages/menu/menu.wxml-->
+<!-- 导入模板 -->
+<import src='/pages/template/timeBtn.wxml'/>
+
+<!-- 背景 -->
+<image src='/images/bg/bgMenu.jpg' class='bgMenu'></image>
+<!-- 加载组件 -->
+<loading wx:if="{{list_data.length === 0}}" ></loading>
+<rotation></rotation>
+
+<!-- 主页面start -->
+<view class='container'>
+  <!-- 用户信息 -->
+  <view class='userInfo'>
+    <view class='line'></view>
+    <image src='{{list_data[0].avatar}}' class='avatar'></image>
+    <text class='text1'>欢迎</text>
+    <text class='text1 text2'>{{list_data[0].SJXM}}</text>
+  </view>
+
+  <!-- 跳转菜单 -->
+  <view class='navMenu'>
+    <view class='nav' hover-class="hover" bindtap='moveToDayData'>
+      <image src='/images/navMenu/navM.jpg' class='navImg'></image>
+      <text class='navText'>日数据</text>
+    </view>
+    <view class='nav' hover-class="hover" bindtap='moveToMonthData'>
+      <image src='/images/navMenu/navD.jpg' class='navImg'></image>
+      <text class='navText'>月数据</text>
+    </view>
+    <view class='nav' hover-class="hover" bindtap='moveToWeather'>
+      <image src='/images/navMenu/navW.png' class='navImg'></image>
+      <text class='navText'>天气查询</text>
+    </view>
+  </view>
+
+  <!-- 最近月信息展示 -->
+  <view class='info-type'>
+    <!-- 标题 start -->
+    <view class='type-title'>
+      <text>近期月数据</text>
+      <navigator url="/pages/list/list">更多</navigator>
+    </view>
+    <!-- 标题 end -->
+    <!-- 列表 start -->
+    <scroll-view class='info-list' scroll-x>
+      <!-- 加载信息 start  -->
+      <!-- <info-item wx:for="{{ type.list }}" wx:for-item="film" wx:key="{{ index }}" film="{{ film }}"></info-item> -->
+      <view wx:for='{{list_data}}' wx:key='{{index}}' hover-class="hover" class='list'>
+        <view class='content' catchtap='toDetail' data-index='{{index}}'>
+          <template is='timeBtn' data='{{...item}}' />
+        </view>
+        <view class='cut'></view>
+      </view>
+      <!-- 加载信息 end  -->
+    </scroll-view>
+    <!-- 列表 end  -->
+  </view>
+</view>

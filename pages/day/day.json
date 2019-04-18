@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "calendar": "plugin://calendar/calendar",
+    "animation-menu": "../../component/animationMenu/animationMenu"
+  },
+  "navigationBarTitleText": "日数据查询",
+  "navigationBarBackgroundColor": "#DDD"
+}

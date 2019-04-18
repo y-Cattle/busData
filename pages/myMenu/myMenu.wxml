@@ -1,0 +1,23 @@
+<!--pages/myMenu/myMenu.wxml-->
+
+  <view class='myMenuBox'>
+    <view class='container'>
+      <image class='bgImg' src='/images/bg/myBg.jpg'></image>
+      <view class='avatar'>
+        <image class='headPic' src='{{userInfo.avatarUrl}}'></image>
+      </view>
+      <view class='userName'>
+        <text>{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <view class='cutLine'></view>
+    <view class='btnClass'>
+      <view wx:for='{{menuitems}}'  wx:key='{{index}}'>
+        <view class='myBtn' bindtap='update{{index}}' hover-class="hover">
+          <image class='leftImg' src='/images/icon/circle.png'></image>
+          <text class='textCon'>{{item.text}}</text>
+          <image class='rightGoImg' src='/images/icon/next.png'></image>
+        </view>
+      </view>
+    </view>
+</view>

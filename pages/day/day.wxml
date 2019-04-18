@@ -1,0 +1,31 @@
+<!--pages/day/day.wxml-->
+<animation-menu></animation-menu>
+<view class='bgImg'>
+  <image src='/images/bg/dayBg.jpg' class='img'></image>
+</view>
+<view class='container'>
+  <!-- 日历 -->
+  <view class='cal_content'>
+    <calendar weeks-type="cn" year="{{year}}" month="{{month}}" day="{{day}}" days-color="{{day_style}}" cell-size="22" calendar-style="day-calendar" header-style="day-header" board-style="day-board" binddayClick="dayClick" bindnextMonth="next" bindprevMonth="prev"
+      binddateChange="dateChange" />
+  </view>
+</view>
+<!-- 数据显示部分 -->
+<view class='content-list'>
+  <view class='leftData'>
+    <view class='left-list'><text>年：</text><text> {{list_data[0].N}}</text></view>
+    <view class='left-list'><text>月：</text><text> {{list_data[0].Y}}</text></view>
+    <view class='left-list'><text>日：</text><text> {{list_data[0].R}}</text></view>
+    <view class='left-list'><text>司机姓名：</text><text> {{list_data[0].SJXM}}</text></view>
+    <view class='left-list'><text>实际营运圈次：</text><text> {{list_data[0].SJYYQC}}</text></view>
+  </view>
+  <view class='middle-line'></view>
+  <view class='rightData'>
+    <view class='right-list'>
+      <view class='left-list'><text>总行驶千米：</text><text> {{list_data[0].ZXSQM}}</text></view>
+      <view class='left-list'><text>营运收入：</text><text> {{list_data[0].YYSR}}</text></view>
+      <view class='left-list'><text>营运人次：</text><text> {{list_data[0].YYRC}}</text></view>
+      <view class='left-list'><text>标准节亏：</text><text> {{list_data[0].BZJK}}</text></view>
+    </view>
+  </view>
+</view>

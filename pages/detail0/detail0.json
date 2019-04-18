@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "animation-menu": "../../component/animationMenu/animationMenu"
+  },
+  "navigationBarTitleText": "详情信息页"
+}

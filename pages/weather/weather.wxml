@@ -1,0 +1,101 @@
+<!--pages/weather/weather.wxml-->
+
+<view class="content">
+<animation-menu></animation-menu>
+  <scroll-view scroll-y='true' style='height:{{scroll_height}}rpx' enable-back-to-top='true' scroll-top='{{topNum}}'>
+    <view class='bcg' wx:if='{{!bcgImg}}' style='background: {{bcgColor}}'></view>
+    <image class='bcg' wx:if='{{bcgImg}}' src='{{bcgImg}}' mode='aspectFill'></image>
+    <!-- 搜索 -->
+    <view class='search' wx:if='{{!setting.hiddenSearch && !bcgImgAreaShow}}' style='background:rgba(255, 255, 255, 0)'>
+      <view class='wrapper'>
+        <image src='/images/weather/search.png'></image>
+        <input placeholder-class='placeholderClass' confirm-type='search' placeholder='请输入城市名，快速查询天气信息' maxlength='20' bindconfirm='commitSearch' value='{{inputCity}}'></input>
+      </view>
+    </view>
+
+    <!--当日天气-->
+    <view class="info">
+      <view class='city'>
+        <view class='weekday'>{{weekday}}</view>
+        <view class='cityName'>{{currentWeather.currentCity}}</view>
+        <view class='currentDate'>{{currentDate}}</view>
+      </view>
+
+      <view class='temp'>
+        <view class='currentTemp'>{{currentWeather.date}}</view>
+        <view class='temp_right'>
+          <view class='celsius'>℃</view>
+          <view class='realtime'>(实时)</view>
+        </view>
+      </view>
+
+      <image class='weatherIcon' src='{{iconURL}}' mode="Widthfix"></image>
+      <view class='type'>{{currentWeather.weatherDesc}}</view>
+      <view class='tempRange'>{{currentWeather.temperature}}</view>
+      <view class='wind'>{{currentWeather.wind}}</view>
+      <view class='air' style="background:{{airColor}}; border:{{airColor}}">{{currentWeather.pm25}} {{airClass}}</view>
+    </view>
+
+    <!--最近3天天气-->
+    <view class='nearW'>
+      <view class='title'>3 天预报</view>
+      <view class='forecast'>
+        <view class='next-day' wx:key="{{index}}" wx:for="{{forecast}}">
+          <view class='detail date'>{{item.date}}</view>
+          <image class='forecastIcon' src='{{item.iconURL}}' mode="Widthfix"></image>
+          <view class='detail'>{{item.weather}}</view>
+          <view class='detail'>{{item.temperature}}</view>
+          <view class='detail'>{{item.windDeriction}}</view>
+          <view class='detail'>{{item.windSpeed}}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='livingIndex'>
+      <!--感冒指数-->
+      <view class='title'>生活指数</view>
+      <view class='tips first'>
+        <image class='icon' src='/images/weather/lifestyle_flu.png'></image>
+        <view class='right'>
+          <view class='key'>感冒指数：{{ganmao.zs}}</view>
+          <view>
+            <view class='value'>{{ganmao.des}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!--运动指数-->
+      <view class='tips'>
+        <image class='icon' src='/images/weather/lifestyle_sport.png'></image>
+        <view class='right'>
+          <view class='key'>运动指数：{{yundong.zs}}</view>
+          <view>
+            <view class='value'>{{yundong.des}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!--紫外线指数-->
+      <view class='tips'>
+        <image class='icon' src='/images/weather/lifestyle_ag.png'></image>
+        <view class='right'>
+          <view class='key'>紫外线指数：{{ziwaixian.zs}}</view>
+          <view>
+            <view class='value'>{{ziwaixian.des}}</view>
+          </view>
+        </view>
+      </view>
+
+      <!--洗车指数-->
+      <view class='tips'>
+        <image class='icon' src='/images/weather/lifestyle_cw.png'></image>
+        <view class='right'>
+          <view class='key'>洗车指数：{{xiche.zs}}</view>
+          <view>
+            <view class='value'>{{xiche.des}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

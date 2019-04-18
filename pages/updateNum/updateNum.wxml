@@ -1,0 +1,24 @@
+<!--pages/updateNum/updateNum.wxml-->
+
+<view class='updatePage'>
+  <view class='headCon'>
+    <image src='/images/icon/figureIcon.jpg'></image>
+    <text>修改司机编号信息</text>
+  </view>
+  <view class='inputBox'>
+    <form>
+      <view class='list1'>
+        <text class='noteText0'>原编号:</text>
+        <input class='inpCon0' type='text' value='{{loginNum}}' placeholder='请输入原编号' focus='true' maxlength='15' bindblur='getFigureNum1'></input>
+      </view>
+      <view class='list2'>
+        <text class='noteText'>新编号:</text>
+        <input class='inpCon' type='text' placeholder='请输入新编号' focus='true' maxlength='15' bindblur='getFigureNum'></input>
+      </view>
+      <button class="weui-btn" bindtap='updateNum' type="primary">确认</button>
+      <button class="btn"  bindtap='autoGet' type="warn">自动获取原编号</button>
+    </form>
+  </view> 
+  <view class="weui-footer__text nowStyle">Copyright © 2019 FJA</view>
+</view>
+<!-- form-type='reset' -->

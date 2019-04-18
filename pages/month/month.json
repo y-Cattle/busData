@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "月信息查询",
+  "backgroundColor": "#F5F5F5",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "date-picker": "../../component/date-picker/date-picker",
+    "rotation": "../../component/rotation/rotation",
+    "animation-menu": "../../component/animationMenu/animationMenu"
+  }
+}

@@ -1,0 +1,83 @@
+/* pages/list/list.wxss */
+@import '/pages/template/timeBtn.wxss';
+
+.info {
+    width: 100%;
+}
+
+/* 分类样式 */
+
+.info-type {
+    background-color: white;
+    margin-top: 20rpx;
+}
+
+.info .info-type:first-child {
+    margin-top: 0rpx;
+}
+
+/* 分类标题 */
+
+.type-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 16rpx 0rpx;
+    padding: 10rpx 0rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #333;
+    background: rgba(79, 165, 136, 0.575);
+    position: relative;
+    box-shadow: 6rpx 6rpx 6rpx rgba(79, 165, 136, 0.712);
+}
+
+.type-title .line {
+    width: 10rpx;
+    height: 50rpx;
+    background: #42bd56;
+    margin-right: 26rpx;
+}
+
+.title-img{
+  width:50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-right: 15rpx;
+  opacity: 0.8;
+}
+
+.title-img-right{
+  width:50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 50rpx;
+  top:0;
+}
+
+/* 电影列表 */
+
+.info-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.list {
+  display: inline-block;
+  /* float: left; */
+}
+
+.content {
+  display: inline-block;
+  margin: 10rpx;
+}
+
+.datas-end{
+    text-align: center;
+    color: #999;
+    font-size: 30rpx;
+    padding: 10rpx
+}

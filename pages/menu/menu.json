@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "rotation":"../../component/rotation/rotation",
+    "animation-menu":"../../component/animationMenu/animationMenu",
+    "loading": "../../component/loading/loading"
+  }
+}

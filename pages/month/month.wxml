@@ -1,0 +1,52 @@
+<!--pages/month/month.wxml-->
+<animation-menu></animation-menu>
+<rotation></rotation>
+<!-- 背景图片 -->
+<view class='bgImg'>
+  <image src='/images/bg/monthBg.jpg' class='img'></image>
+</view>
+
+<view class='container'>
+  <!-- 顶部日期选择部分 -->
+  <view class='header'>
+    <!-- 日期选择按钮 -->
+    <view class='header-btn-bg'>
+      <view class='header-button'>
+        <view bindtap='prevMonth'  class='border-radius' hover-class='hover'>
+          <image src='/images/icon/prevMonth.png' ></image>
+        </view>
+        <view class='btn' bindtap="showDatePicker" hover-class='hover'>
+          <text>选择日期</text>
+        </view>
+        <date-picker id="date-picker" value="{{datePickerValue}}" isShow="{{datePickerIsShow}}" bindsureclick="datePickerOnSureClick" bindcancelclick="datePickerOnCancelClick" />
+        <view bindtap='nextMonth'  hover-class='hover' class='border-radius'>
+          <image src='/images/icon/nextMonth.png'></image>
+        </view>
+      </view>
+    </view>
+
+    <!-- 目前日期显示区域 -->
+    <view class='header-msg'>
+      <text>当前日期：{{year}}年 {{month}}月</text>
+    </view>
+  </view>
+</view>
+<!-- 数据显示部分 -->
+<view class='content-list'>
+  <view class='leftData'>
+    <view class='left-list'><text>年：</text><text> {{list_data[0].N}}</text></view>
+    <view class='left-list'><text>月：</text><text> {{list_data[0].Y}}</text></view>
+    <view class='left-list'><text>工作日：</text><text> {{list_data[0].GZR}}</text></view>
+    <view class='left-list'><text>司机姓名：</text><text> {{list_data[0].SJXM}}</text></view>
+    <view class='left-list'><text>实际营运圈次：</text><text> {{list_data[0].SJYYQC}}</text></view>
+  </view>
+  <view class='middle-line'></view>
+  <view class='rightData'>
+    <view class='right-list'>
+      <view class='left-list'><text>总行驶千米：</text><text> {{list_data[0].ZXSQM}}</text></view>
+      <view class='left-list'><text>营运收入：</text><text> {{list_data[0].YYSR}}</text></view>
+      <view class='left-list'><text>营运人次：</text><text> {{list_data[0].YYRC}}</text></view>
+      <view class='left-list'><text>标准节亏：</text><text> {{list_data[0].BZJK}}</text></view>
+    </view>
+  </view>
+</view>

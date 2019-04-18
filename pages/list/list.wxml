@@ -1,0 +1,37 @@
+<!--pages/list/list.wxml-->
+<import src='/pages/template/timeBtn.wxml' />
+<animation-menu></animation-menu>
+
+<loading wx:if="{{ list_data.length == 0 }}"></loading>
+<view wx:if='{{flag}}' class='wrong'>
+  <text> 未录入（或未录入正确）员工编号，请进入->'我的'->'信息录入页''</text>
+</view>
+
+
+<view class='info'>
+  <!-- 列表容器 start-->
+  <view class='info-type' wx:if="{{ list_data.length!=0 }}">
+    <!-- 标题 start -->
+    <view class='type-title'>
+      <view class='line'></view>
+      <image src='/images/icon/listIcon.jpg' class='title-img'></image>
+      <text>近期月数据查询</text>   
+      <image src='/images/icon/listIcon2.jpg' class='title-img-right'></image>
+    </view>
+    <!-- 标题 end -->
+    <!-- 列表 start -->
+    <view class='info-list'>
+      <!-- start -->
+      <view wx:for='{{list_data}}' wx:key='{{index}}' hover-class="hover" class='list'>
+        <view class='content' catchtap='toDetail' data-index='{{index}}'>
+          <template is='timeBtn' data='{{...item}}' />
+        </view>
+      </view>
+      <!-- end -->
+    </view>
+    <!-- 列表 end  -->
+  </view>
+  <!-- 列表容器 end -->
+  <loading wx:if="{{ showLoading&&!list_data.length==0  }}" ></loading>
+  <view wx:if="{{ !showLoading }}" class='datas-end'>没有更多数据了</view>
+</view>

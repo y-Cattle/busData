@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "rotation": "../../component/rotation/rotation"
+  },
+  "navigationBarTitleText": "信息录入页"
+}

@@ -1,0 +1,42 @@
+<!--pages/detail0/detail0.wxml-->
+<animation-menu></animation-menu>
+
+<view class='detailPage'>
+  <image class='headImg' src='{{listData[index].src}}'></image>
+  <view class='infoBg'>
+    <image class='conBg' src='/images/bg/detailBg.jpg'></image>
+    <view class='user_time_data'>
+        <image src='{{listData[index].avatar}}'></image>
+        <text class='nickName'>{{listData[index].SJXM}}</text>
+        <text>发布于</text>
+        <text class='time'>{{listData[index].N}}年{{listData[index].Y}}月</text>
+    </view>
+    <text class='fixedText'>数据信息表</text>
+    <view class='cut_Img_Line'>
+      <view class='cutImg'>
+        <image src='/images/myCover.png'></image>
+      </view>
+      <view class='cutLine'></view>
+    </view>
+  </view>
+</view>
+<view class='table'>
+ <view class='tr'>
+    <view class='th'>司机姓名</view>
+    <view class='th'>实际营运圈数</view>
+    <view class='th'>总行驶千米</view>
+    <view class='th'>营运收入</view>
+    <view class='th'>营运人次</view>
+    <view class='th'>标准节亏</view>
+    <view class='th'>工作日</view>
+  </view>
+  <view class='tr'>
+    <view class='td'>{{listData[index].SJXM}}</view>
+    <view class='td'>{{listData[index].SJYYQC}}</view>
+    <view class='td'>{{listData[index].ZXSQM}}</view>
+    <view class='td'>{{listData[index].YYSR}}</view>
+    <view class='td'>{{listData[index].YYRC}}</view>
+    <view class='td'>{{listData[index].BZJK}}</view>
+    <view class='td'>{{listData[index].GZR}}</view>
+  </view>
+</view>

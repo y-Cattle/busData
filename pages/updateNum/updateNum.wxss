@@ -1,0 +1,106 @@
+/* pages/updateNum/updateNum.wxss */
+
+.updatePage{
+  display: flex;
+  flex-direction: column;
+}
+
+.headCon{
+  text-align: center;
+}
+
+.headCon image{
+  width: 98%;
+  height: 300rpx;
+  border: 6rpx solid gray;
+}
+
+.headCon text{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: gray;
+  position: relative;
+  top:50rpx;
+}
+
+.list1{
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+}
+
+.list2{
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+}
+
+.inputBox{
+  margin-top: 100rpx;
+  position: relative;
+  height: 600rpx;
+}
+
+.noteText{
+  font-size: 32rpx;
+  font-weight: bold;
+  color: 	#708090;
+  margin-left: 5%;
+  position: absolute;
+  /* margin-top: 60rpx; */
+}
+
+.inpCon{
+  /* display: inline-block; */
+  width: 65%;
+  height: 36rpx;
+  border:2rpx solid #eee;
+  border-radius: 30rpx;
+  padding: 0 20rpx;
+  /* margin-top: 50rpx; */
+  position: absolute;
+  left: 25%;
+}
+
+.noteText0{
+  /* display: inline-block; */
+  font-size: 32rpx;
+  font-weight: bold;
+  color: 	#708090;
+  margin-left: 5%;
+  position: absolute;
+
+}
+
+.inpCon0{
+  width: 65%;
+  height: 36rpx;
+  border:2rpx solid #eee;
+  border-radius: 30rpx;
+  padding: 0 20rpx;
+  /* margin-top: 50rpx; */
+  position: absolute;
+  left: 25%;
+}
+
+.weui-btn{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  top: 200rpx;
+  left: 10%;
+}
+
+.btn{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+}
+
+.nowStyle{
+  text-align: center;
+}

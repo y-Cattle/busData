@@ -1,0 +1,7 @@
+{"usingComponents": {
+    "animation-menu": "../../component/animationMenu/animationMenu",
+    "loading": "../../component/loading/loading"
+  },
+  "navigationBarTitleText": "信息展示页",
+  "enablePullDownRefresh": true
+}

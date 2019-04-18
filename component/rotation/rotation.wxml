@@ -1,0 +1,11 @@
+<!--component/rotation/rotation.wxml-->
+<!-- 轮播图 -->
+ <view class='rotation'>
+    <swiper indicator-dots="true" indicator-color='#fff'  indicator-active-color='#99CC00' autoplay='true' interval="3000" duration="1000" circular='true' skip-hidden-item-layout='true' previous-margin='5rpx' next-margin='5rpx' bindchange='swiperChange'>
+      <block wx:for='{{imgUrls}}' wx:key='index'>
+        <swiper-item>
+          <image src='{{item}}' class='slide-image {{nowIdx==index?"img-active":""}} '></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
